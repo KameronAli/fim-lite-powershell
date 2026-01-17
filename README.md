@@ -44,11 +44,20 @@ File integrity monitoring helps with:
 
 ## Demo
 
-Example output after creating `new.txt` and running Compare:
+This run shows a Created event for new.txt after re-running Compare:
 
-![FIM demo output](images/test%20results.png)
+![FIM demo output](images/test-results.png)
 
 
+---
+
+## Troubleshooting
+
+- If scripts are blocked, set execution policy (CurrentUser):
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```
+- If you see the script flagging its own baseline/report files, add -Exclude "*.csv","fim-lite.ps1" and recreate baseline.
 
 
 ## Requirements
@@ -56,6 +65,4 @@ Example output after creating `new.txt` and running Compare:
 - **Windows PowerShell 5.1**
 - Permission to read the target directory
 
-> If scripts are blocked, set execution policy (CurrentUser):
-```powershell
-Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
