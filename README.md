@@ -41,6 +41,16 @@ File integrity monitoring helps with:
 
 ---
 
+
+## Demo
+
+Example output after creating `new.txt` and running Compare:
+
+![FIM demo output](images/test%20results.png)
+
+
+
+
 ## Requirements
 
 - **Windows PowerShell 5.1**
